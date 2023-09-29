@@ -1,0 +1,98 @@
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gap-1 {
+    gap: 12px;
+}
+
+.gap-2 {
+    gap: 16px;
+}
+
+.gap-3 {
+    gap: 20px;
+}
+
+.gap-4 {
+    gap: 24px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-end {
+    justify-content: end;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: end;
+}
+
+.padding-none {
+    padding: 0;
+}
+
+.margin-none {
+    margin: 0;
+}
+
+.background-white {
+    background-color: #fff;
+}
+
+.box-shadow {
+    box-shadow: 0 3px 16px rgba(0, 0, 0, .16);
+}
+
+.bra-0 {
+    border-radius: 0;
+}
+
+.bra-2xs {
+    border-radius: 4px;
+}
+
+.bra-xs {
+    border-radius: 8px;
+}
+
+.bra-md {
+    border-radius: 12px;
+}
+
+.bra-lg {
+    border-radius: 18px;
+}
+
+.relative {
+    position: relative;
+}
+
+.form-control {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.title-lg {
+    font-size: 3rem;
+}

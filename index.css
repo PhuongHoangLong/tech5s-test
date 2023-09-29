@@ -1,62 +1,120 @@
+:root {
+    --color-danger: #c00;
+    --color-primary: #028cdd;
+}
+
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    color: #252525;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* start-css */
+
+.background-container {
+    height: 100vh;
+    background-color: #111;
 }
 
 
-.container {
-    max-width: 1312px !important;
-    width: 100% !important;
+
+.btn-0 {
+    padding: 20px;
+    border: 1px solid #b21010;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #fff9, transparent 50% 90%, #00000099), repeating-linear-gradient(60deg, #bc058200 0 10px, transparent 10px 20px), linear-gradient(to bottom, #ef0808, #ee6c6c);
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #efb7de;
+    box-shadow: 0px 9px 0 #0005, 0 5px 0 #bd133a, 0px 3px 0 7px #fff, 1px 3px 30px 16px #e2606c;
+    transition: 0.3s;
+    position: absolute;
+    top: 30%;
+    left: 30%;
 }
 
-.header-body {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+.btn-0.on {
+    padding: 20px;
+    border: 1px solid #15b210;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #fff9, transparent 50% 90%, #00000099), repeating-linear-gradient(60deg, #bc058200 0 10px, transparent 10px 20px), linear-gradient(to bottom, #10ef08, #6cee6c);
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #b7efbc;
+    box-shadow: 0px 9px 0 #0005, 0 5px 0 #13bd46, 0px 3px 0 7px #fff, 1px 3px 30px 16px #60e276;
+    transition: 0.3s;
+    position: absolute;
+    top: 30%;
+    left: 30%;
 }
 
-.header-bot {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+.btn-0.on:active {
+    box-shadow:
+        0 0px 0 #0005,
+        0 0px 0 #BD1360,
+        0 0px 0 7px #fff,
+        0 0 30px 30px #e260ae;
+    transform: translateY(5px);
+    border: 1px solid #b21010;
+    background-image: linear-gradient(to bottom, #fff9, transparent 50% 90%, #00000099), repeating-linear-gradient(60deg, #bc058200 0 10px, transparent 10px 20px), linear-gradient(to bottom, #ff0022, #ee6c77);
+    box-shadow: 0px 9px 0 #0005, 0 5px 0 #b91026, 0px 3px 0 7px #fff, 1px 3px 30px 16px #e26060;
+
 }
 
-/* .banner-left-images {
-    background-image: url('Assets/Images/banner.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-} */
+.btn-0:active {
+    box-shadow:
+        0 0px 0 #0005,
+        0 0px 0 #BD1360,
+        0 0px 0 7px #fff,
+        0 0 30px 30px #e260ae;
+    transform: translateY(5px);
+    border: 1px solid #10b21e;
+    background-image: linear-gradient(to bottom, #fff9, transparent 50% 90%, #00000099), repeating-linear-gradient(60deg, #bc058200 0 10px, transparent 10px 20px), linear-gradient(to bottom, #00ff0d, #6cee77);
+    box-shadow: 0px 9px 0 #0005, 0 5px 0 #2cb910, 0px 3px 0 7px #fff, 1px 3px 30px 16px #60e271;
 
-.event {
-    background: linear-gradient(90deg, #FAD73B 0%, #FAD037 9.38%, #FC9A17 100%);
-    border-radius: 5px 5px 0px 0px;
 }
 
-.progress-bar {
-    background: linear-gradient(90deg, #f26f01 0%, #e35103 20%, #d83904 60%, #cb1e06 80%, #c30f07 100%);
+.background-container>.text-effect>p {
+    color: #111;
+    transition: .3s;
 }
 
-.question {
-    background-image: url("Assets/Images/Mask\ group.png"), url('Assets/Images/background.png');
-    background-color: #F5DC6C;
-    background-size: cover;
+.background-container>.text-effect:hover>p {
+    color: var(--color);
+    text-shadow: 8px -2px 7px #0652dd, 0 0 50px #0652dd, 0 0 100px #0652dd;
 }
 
-.news-bg1 {
-    background-image: url('Assets/Images/news.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 392px;
-    border-radius: 5px;
+.background-container>.text-effect.active>p {
+    animation: run 5s ease-in-out infinite;
+    animation-delay: var(--delay);
 }
 
-.news-bg2 {
-    background-image: url("Assets/Images/news2.png");
-    height: 188px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 5px;
+
+
+@keyframes run {
+
+    0%,
+    100% {
+        color: var(--color);
+        text-shadow: 0 0 10px #0652dd, 0 0 50px #0652dd, 0 0 100px #0652dd;
+    }
+
+    10%,
+    90% {
+        color: #111;
+        text-shadow: none;
+    }
 }
 
-.sub-bg {
-    background-image: url('Assets/Images/background2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+.text-show {
+    color: var(--color);
+    transition: .5s ease-in-out;
+    transform: scale(0);
+}
+
+.text-show.active {
+    transform: scale(2);
 }
