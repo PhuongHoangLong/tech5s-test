@@ -77,6 +77,10 @@
 
 }
 
+.background-container>.text-effect {
+    height: 100vh;
+}
+
 .background-container>.text-effect>p {
     color: #111;
     transition: .3s;
